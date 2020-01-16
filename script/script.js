@@ -46,6 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cartBtn.addEventListener('click', openCart);
     cart.addEventListener('click', closeCart);
-    cart.addEventListener('keydown', closeCart); 
+    window.addEventListener('keydown', closeCart); 
 
 });
