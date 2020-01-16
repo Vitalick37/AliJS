@@ -32,11 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closeCart = (e) => {
         const target = e.target;
-        if (target === cart || target.classList.contains('cart-close' || e.keyCode === 27)) {
+        if (target === cart || target.classList.contains('cart-close') || e.keyCode === 27) {
             cart.style.display = 'none';
         }
     };
     const openCart = () => {
+        event.preventDefault();
         cart.style.display = 'flex';
     };
     
