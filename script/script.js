@@ -36,9 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
             cart.style.display = 'none';
         }
     };
-    const openCart = () => {
+    const openCart = (event) => {
         event.preventDefault();
         cart.style.display = 'flex';
+        document.addEventListener('keydown', closeCart); 
     };
     
 
@@ -46,6 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cartBtn.addEventListener('click', openCart);
     cart.addEventListener('click', closeCart);
-    window.addEventListener('keydown', closeCart); 
+    
 
 });
